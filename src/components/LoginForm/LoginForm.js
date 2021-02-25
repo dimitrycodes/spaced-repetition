@@ -3,6 +3,7 @@ import { Input, Label } from '../Form/Form'
 import AuthApiService from '../../services/auth-api-service'
 import UserContext from '../../contexts/UserContext'
 import Button from '../Button/Button'
+import { Link } from 'react-router-dom'
 
 class LoginForm extends Component {
   static defaultProps = {
@@ -29,8 +30,8 @@ class LoginForm extends Component {
         username.value = ''
         password.value = ''
         this.context.processLogin(res.authToken)
-        this.props.onLoginSuccess()
       })
+      .then(() => this.props.onLoginSuccess())
       .catch(res => {
         this.setState({ error: res.error })
       })
@@ -75,6 +76,7 @@ class LoginForm extends Component {
         <Button type='submit'>
           Login
         </Button>
+        <Link to='/register'>Don't have an account yet?</Link>
       </form>
     )
   }
