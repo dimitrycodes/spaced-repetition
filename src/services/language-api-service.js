@@ -6,7 +6,7 @@ const LanguageApiService = {
     return fetch(`${config.API_ENDPOINT}/language`, {
       headers: {
         'content-type': 'application/json',
-        'authorization': `bearer ${TokenService.getAuthToken()}`
+        'authorization': `Bearer ${TokenService.getAuthToken()}`
       }
     })
       .then(res =>
@@ -19,7 +19,7 @@ const LanguageApiService = {
     return fetch(`${config.API_ENDPOINT}/language/head`, {
       headers: {
         'content-type': 'application/json',
-        'authorization': `bearer ${TokenService.getAuthToken()}`
+        'authorization': `Bearer ${TokenService.getAuthToken()}`
       }
     })
       .then(res =>
