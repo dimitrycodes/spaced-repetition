@@ -1,4 +1,4 @@
 export default {
-  API_ENDPOINT: 'http://localhost:8000/api', //https://aqueous-reef-27793.herokuapp.com/api
+  API_ENDPOINT: 'https://aqueous-reef-27793.herokuapp.com/api', //http://localhost:8000/api
   TOKEN_KEY: 'spacedreppetition-client-auth-token',
 }
